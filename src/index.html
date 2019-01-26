@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ethereum Store</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Ethereum Free Market</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="addressDisplay" class = "row">
+        <strong>Address</strong>: <span id="userAddress">0x0000000000000000000000000000000000000000</span><br/>
+        <strong>Balance (eth)</strong>: <span id="userBalance">0</span><br/>
+        <strong>Permissions</strong>: <span id = "permissions"> Test </span>
+      </div>
+
+      <div id="userControls" class = "row">
+        <div class = "col-sm-4">
+          <div class = "panel-heading">
+            <strong>Admin Controls </strong>
+          </div>
+            <button id="btn-update" type="button">Ban Address</button>
+            <button id="btn-addSeller" type="button">Add Seller</button>
+            <button id="btn-addAdmin" type="button">Add Admin</button>
+            <br>Affected address:<br>
+            <input type="text" id="affectedAddress"><br>
+            <br>
+            <button id="btn-aucEnd" type="button" visibility = hidden>End Auction (seller / high bidder)</button>
+        </div>
+        <div class = "col-sm-4">
+          <div class = "panel-heading">
+            <strong>Seller Controls</strong>
+          </div>
+            <button id="btn-sellItem" type="button">Sell Item</button>
+            <button id="btn-aucItem" type="button">Auction Item</button>
+            <button id="btn-List" type="button">List My Items</button>
+            <br>Item Name:
+            <input type="text" id="itemName">
+            <br>Price (in Eth):
+            <input type="text" id="itemPrice">
+            <br>Path to photo:
+            <input type="file" id="itemPhoto"><!-- value="/home/michael/Desktop/car.jpg"-->
+            <!-- id="btn-setImg" type="button">Set</button><br-->
+              <div class = "row", id="images", style=none>
+                 <input type="image" alt="Click To Cycle Through Designs" style="width:304px;height:228px;" id="design_display">
+              </div>
+        </div>
+        <div class = "col-sm-4">
+          <div class = "panel-heading">
+            <strong>Buyer Controls</strong>
+          </div>
+            <button id="btn-testIPFS" type="button">Test IPFS</button>
+            <button id="btn-testIPFS2" type="button">Restore Hash</button>
+            <div id="current_item_name"> Item Name </div>
+            <div id="current_item_price"> Price (ETH)</div>
+            <div id="auction_info"> Item State Unknown </div>
+            <div id="auction_address">   </div>
+              <div class = "row", id="images", style=none>
+                 <input type="image" alt="No image available" style="width:304px;height:228px;" id="current_item_display">
+              </div>
+              <button id = "btn_buy_bid" type="button"> Buy </button>
+              <button id = "btn-withdraw" type = "button"> Withdraw all </button><br>
+              <button id = "prev_button" type="button"> PREV </button>
+              <button id = "next_button" type="button"> NEXT </button>
+
+          </div>
+
+      </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <!--script src ="js/ipfs.js" type = "module"></script-->
+    <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
+    <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js"></script>
+    <!--script src="https://unpkg.com/ipfs/dist/index.min.js"></script-->
+    <script src="js/app.js"></script>
+
+    <div id=test2> test </div>
+  </body>
+</html>
