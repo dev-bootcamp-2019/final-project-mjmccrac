@@ -1,4 +1,7 @@
 # Ethereum Store
+
+node_modules folder was too large to import to GitHub: Please run npm install from this directory to reinstall all needed modules before running!
+
 ## General Description
 This app is a decentralized store with 3 types of users: admins, sellers, and buyers.
 Admins control which addresses have seller or admin privileges.
